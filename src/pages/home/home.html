@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <button ion-button block (click)="loginFb()">Login with Facebook</button>
+      <img src="{{profile_image}}">
+  <ion-item>
+    <ion-input type="text" placeholder="Profile Name" [(ngModel)]="profile_name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Email address" [(ngModel)]="email_address"></ion-input>
+  </ion-item>
+  <button ion-button block (click) ="storeData()">Save Data</button>
+  <button ion-button block (click) ="getValues()">Show Data</button>
+
+</ion-content>
+
+<!-- <ion-content padding>
+  <button ion-button full (click)="loginWithFB()">Login!</button>
+ 
+  <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+    <img [src]="userData.picture" />
+    <ion-card-content>
+      <p>Email: {{ userData.email }}</p>
+      <p>First Name: {{ userData.first_name }}</p>
+    </ion-card-content>
+  </ion-card>
+ 
+</ion-content> -->

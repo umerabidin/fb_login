@@ -1,0 +1,7 @@
+{
+  "name": "fblogin",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
