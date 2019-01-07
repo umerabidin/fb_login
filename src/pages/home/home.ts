@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook';
 import { ToastController } from 'ionic-angular';
-import { HttpClient } from '@angular/common/http';
 import { Storage } from '@ionic/storage';
 
 
@@ -17,8 +16,10 @@ email_address: string;
 userData: any;
 profile_image: string;
 username: string;
-  constructor(public navCtrl: NavController, private facebook: Facebook,
-    private toastCtrl: ToastController,private http: HttpClient,private storage: Storage) {
+  constructor(public navCtrl: NavController,
+     private facebook: Facebook,
+    private toastCtrl: ToastController,
+    private storage: Storage) {
 
   }
 
@@ -47,6 +48,10 @@ getValues(){
 
   this.storage.get('email_address').then((val) => {
     this.email_address = val;
+
+  });
+  this.storage.get('profile_image').then((val) => {
+    this.profile_image = val;
 
   });
  }
